@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SnapGrid — Support &amp; Privacy</title>
+<meta name="description" content="Support, FAQ, and privacy policy for SnapGrid — Window Manager: Snap, Tile & Arrange for macOS.">
+<style>
+  :root {
+    --bg: #07080c;
+    --surface: rgba(255, 255, 255, 0.045);
+    --stroke: rgba(255, 255, 255, 0.09);
+    --text: rgba(255, 255, 255, 0.92);
+    --muted: rgba(255, 255, 255, 0.55);
+    --accent: #6b70ff;
+    --accent-2: #1ad1bf;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .glow {
+    position: fixed; inset: 0; pointer-events: none;
+    background:
+      radial-gradient(600px 360px at 50% -80px, rgba(107, 112, 255, 0.16), transparent 70%),
+      radial-gradient(500px 320px at 85% 20%, rgba(26, 209, 191, 0.06), transparent 70%);
+  }
+  .wrap { position: relative; max-width: 720px; margin: 0 auto; padding: 64px 24px 80px; }
+
+  header { text-align: center; margin-bottom: 56px; padding-top: 16px; }
+  h1 { font-size: 34px; font-weight: 700; letter-spacing: -0.02em; }
+  .tagline { color: var(--muted); margin-top: 6px; font-size: 15px; }
+
+  nav { display: flex; justify-content: center; gap: 10px; margin-top: 24px; flex-wrap: wrap; }
+  nav a {
+    color: var(--text); text-decoration: none; font-size: 13px; font-weight: 500;
+    padding: 8px 16px; border-radius: 99px;
+    background: var(--surface); border: 1px solid var(--stroke);
+    transition: background 0.15s ease;
+  }
+  nav a:hover { background: rgba(255, 255, 255, 0.09); }
+
+  section { margin-top: 48px; }
+  h2 {
+    font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 14px; padding-left: 4px;
+  }
+  .card {
+    background: var(--surface); border: 1px solid var(--stroke);
+    border-radius: 14px; padding: 24px 26px;
+  }
+  .card + .card { margin-top: 14px; }
+  h3 { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+  p, li { color: var(--muted); font-size: 14.5px; }
+  .card p + h3, .card ul + h3 { margin-top: 20px; }
+  ul { padding-left: 20px; margin-top: 6px; }
+  li { margin-top: 4px; }
+  strong { color: var(--text); font-weight: 600; }
+  a.inline { color: var(--accent); text-decoration: none; }
+  a.inline:hover { text-decoration: underline; }
+
+  .actions { display: flex; gap: 10px; margin-top: 18px; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; text-decoration: none; font-size: 14px; font-weight: 600;
+    padding: 10px 20px; border-radius: 10px; transition: opacity 0.15s ease;
+  }
+  .btn:hover { opacity: 0.85; }
+  .btn-primary { background: #f2f3f7; color: #0b0c10; }
+  .btn-subtle { background: rgba(255, 255, 255, 0.08); color: var(--text); border: 1px solid var(--stroke); }
+
+  kbd {
+    font: 12px/1 ui-monospace, "SF Mono", Menlo, monospace;
+    background: rgba(255, 255, 255, 0.08); border: 1px solid var(--stroke);
+    border-radius: 5px; padding: 2px 6px; color: var(--text);
+  }
+  footer { margin-top: 64px; text-align: center; color: rgba(255, 255, 255, 0.35); font-size: 12.5px; }
+  footer a { color: rgba(255, 255, 255, 0.5); text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="glow"></div>
+<div class="wrap">
+
+  <header>
+    <div class="brand-mark-wrap" aria-hidden="true">
+            <img src="./icon_1024.png" alt="SnapGrid logo" class="brand-mark" width="96" height="96">
+          </div>
+          <h1>SnapGrid</h1>
+    <p class="tagline">Window Manager: Snap, Tile &amp; Arrange — for macOS</p>
+    <nav>
+      <a href="#support">Support</a>
+      <a href="#faq">FAQ</a>
+      <a href="#privacy">Privacy Policy</a>
+    </nav>
+  </header>
+
+  <section id="support">
+    <h2>Support</h2>
+    <div class="card">
+      <h3>Get in touch</h3>
+      <p>Found a bug, or have an idea that would make SnapGrid better? Email arrives directly to the developer and every message is read.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="mailto:tanvir4talk+appsupport@gmail.com?subject=SnapGrid%20-%20Bug%20Report">Report a Bug</a>
+        <a class="btn btn-subtle" href="mailto:tanvir4talk+appfeedback@gmail.com?subject=SnapGrid%20-%20Feedback">Send Feedback</a>
+      </div>
+      <p style="margin-top: 16px;">When reporting a bug, it helps to include your macOS version, your Mac model, and the steps to reproduce the issue. The in-app <strong>Report an Issue</strong> button (Settings ▸ About) pre-fills all of this for you.</p>
+    </div>
+  </section>
+
+  <section id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="card">
+      <h3>Why does SnapGrid need Accessibility permission?</h3>
+      <p>macOS requires explicit permission before any app may move or resize another app's windows. SnapGrid uses the system Accessibility API solely to position windows when you ask it to — nothing else. Grant it in <strong>System Settings ▸ Privacy &amp; Security ▸ Accessibility</strong>.</p>
+
+      <h3>My shortcuts stopped working. What do I do?</h3>
+      <p>Open System Settings ▸ Privacy &amp; Security ▸ Accessibility and check that SnapGrid is listed and switched on. If it is already on, toggle it off and on once. This can be needed after an app update.</p>
+
+      <h3>How do I snap a window?</h3>
+      <ul>
+        <li><strong>Keyboard:</strong> e.g. <kbd>⌃⌥←</kbd> for the left half, <kbd>⌃⌥↩</kbd> to maximize. All shortcuts are customizable in Settings.</li>
+        <li><strong>Drag:</strong> drag a window to a screen edge or corner and release when the preview appears.</li>
+        <li><strong>Palette:</strong> hold <kbd>⌥</kbd> while dragging to pick a snap target from the floating palette.</li>
+      </ul>
+
+      <h3>Can I exclude an app from window management?</h3>
+      <p>Yes — Settings ▸ Behavior ▸ Excluded Apps.</p>
+
+      <h3>Does SnapGrid work with multiple displays?</h3>
+      <p>Yes. <kbd>⌃⌥⌘→</kbd> and <kbd>⌃⌥⌘←</kbd> move the focused window between displays, keeping its proportions.</p>
+    </div>
+  </section>
+
+  <section id="privacy">
+    <h2>Privacy Policy</h2>
+    <div class="card">
+      <p><strong>Effective date:</strong> June 12, 2026</p>
+
+      <h3>The short version</h3>
+      <p>SnapGrid collects <strong>no data</strong>. Period.</p>
+
+      <h3>Data collection</h3>
+      <p>SnapGrid does not collect, store, transmit, sell, or share any personal information or usage data. There are no analytics, no trackers, no advertising identifiers, and no third-party SDKs. The app makes no network connections of its own.</p>
+
+      <h3>What stays on your Mac</h3>
+      <p>Your settings (shortcuts, preferences, excluded apps) and saved window layouts are stored locally on your Mac and never leave it.</p>
+
+      <h3>Accessibility permission</h3>
+      <p>SnapGrid asks for macOS Accessibility permission only so it can move and resize windows at your request. This permission is never used to read your screen content, log keystrokes, or observe your activity.</p>
+
+      <h3>Email</h3>
+      <p>If you choose to contact support or send feedback, your email is used solely to respond to you and is never shared with anyone.</p>
+
+      <h3>Changes</h3>
+      <p>If this policy ever changes, the updated version will be published on this page with a new effective date.</p>
+
+      <h3>Contact</h3>
+      <p>Questions about privacy?</p>
+      <div class="actions">
+        <a class="btn btn-subtle" href="mailto:tanvir4talk+appsupport@gmail.com?subject=SnapGrid%20-%20Privacy%20Question">Email Support</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>SnapGrid for macOS · <a href="mailto:tanvir4talk+appsupport@gmail.com?subject=SnapGrid%20-%20Bug%20Report">Support</a> · <a href="mailto:tanvir4talk+appfeedback@gmail.com?subject=SnapGrid%20-%20Feedback">Feedback</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
